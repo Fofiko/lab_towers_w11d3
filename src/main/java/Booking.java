@@ -7,7 +7,7 @@ public class Booking {
         this.nights = nights;
     }
 
-//    public void updateNights(int nights) {
-//        this.nights = nights;
-//    }
+    public double bill() {
+        return nights * bedroom.getRate();
+    }
 }
