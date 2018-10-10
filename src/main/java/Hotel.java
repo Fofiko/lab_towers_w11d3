@@ -20,4 +20,21 @@ public class Hotel {
     public int countBedrooms() {
         return bedrooms.size();
     }
+
+    public void addConferenceRoom(ConferenceRoom conferenceRoom) {
+        conferenceRooms.add(conferenceRoom);
+
+    }
+
+    public int countConferenceRooms() {
+        return conferenceRooms.size();
+    }
+
+    public void addDiningRoom(DiningRoom diningRoom) {
+        diningRooms.add(diningRoom);
+    }
+
+    public int countDiningRooms() {
+        return diningRooms.size();
+    }
 }

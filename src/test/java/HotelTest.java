@@ -35,6 +35,8 @@ public class HotelTest {
 
         hotel.addBedroom(bedroom1);
         hotel.addBedroom(bedroom2);
+        hotel.addConferenceRoom(conferenceRoom1);
+        hotel.addDiningRoom(diningRoom1);
     }
 
 
@@ -43,6 +45,18 @@ public class HotelTest {
         hotel.addBedroom(bedroom3);
         assertEquals(3, hotel.countBedrooms());
 
+    }
+
+    @Test
+    public void addConferenceRoom(){
+        hotel.addConferenceRoom(conferenceRoom1);
+        assertEquals(2, hotel.countConferenceRooms());
+    }
+
+    @Test
+    public void addDiningRoom(){
+        hotel.addDiningRoom(diningRoom1);
+        assertEquals(2, hotel.countDiningRooms());
     }
 
 
