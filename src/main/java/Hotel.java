@@ -12,4 +12,12 @@ public class Hotel {
         this.conferenceRooms = new ArrayList<>();
         this.diningRooms = new ArrayList<>();
     }
+
+    public void addBedroom(Bedroom bedroom) {
+        bedrooms.add(bedroom);
+    }
+
+    public int countBedrooms() {
+        return bedrooms.size();
+    }
 }
