@@ -105,6 +105,13 @@ public class HotelTest {
         assertEquals(1, bedroom1.countGuests());
     }
 
+    @Test
+    public void vacantBedrooms(){
+        hotel.checkInGuestBedroom(guest1, bedroom1);
+        assertEquals(1, hotel.vacantBedrooms().size());
+
+    }
+
 
 
 

@@ -43,6 +43,10 @@ public class BedroomTest {
         assertEquals(0, bedroom.countGuests());
     }
 
+    @Test
+    public void isEmpty(){
+        assertEquals(true, bedroom.isEmpty());
+    }
 
 
 

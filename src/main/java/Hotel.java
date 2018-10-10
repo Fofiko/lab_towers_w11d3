@@ -1,5 +1,6 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.BitSet;
 
 public class Hotel {
     private ArrayList<Bedroom> bedrooms;
@@ -65,5 +66,15 @@ public class Hotel {
     public Booking bookBedroom(int nights, Bedroom bedroom, Guest guest) {
         checkInGuestBedroom(guest, bedroom);
         return new Booking(bedroom, nights);
+    }
+
+    public ArrayList<Bedroom> vacantBedrooms() {
+        ArrayList<Bedroom> result = new ArrayList<>();
+        for (Bedroom room : this.bedrooms) {
+            if (room.isEmpty()){
+                result.add(room);
+            }
+        }
+        return result;
     }
 }

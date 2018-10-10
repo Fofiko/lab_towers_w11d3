@@ -33,4 +33,8 @@ public class Bedroom {
     public double getRate() {
         return this.rate;
     }
+
+    public boolean isEmpty() {
+        return countGuests() == 0;
+    }
 }
