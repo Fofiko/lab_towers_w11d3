@@ -61,4 +61,9 @@ public class Hotel {
     public void checkOutGuestDiningRoom(Guest guest, DiningRoom room) {
         room.removeGuest(guest);
     }
+
+    public Booking bookBedroom(int nights, Bedroom bedroom, Guest guest) {
+        checkInGuestBedroom(guest, bedroom);
+        return new Booking(bedroom, nights);
+    }
 }

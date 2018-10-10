@@ -99,6 +99,12 @@ public class HotelTest {
         assertEquals(1, diningRoom1.countGuests());
     }
 
+    @Test
+    public void bookBedroom(){
+        hotel.bookBedroom(3, bedroom1, guest1);
+        assertEquals(1, bedroom1.countGuests());
+    }
+
 
 
 
