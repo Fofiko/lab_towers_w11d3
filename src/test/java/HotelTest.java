@@ -24,8 +24,8 @@ public class HotelTest {
     public void before() {
         hotel = new Hotel();
         bedroom1 = new Bedroom(1, 2, "double");
-        bedroom2 = new Bedroom(1, 1, "single");
-        bedroom3 = new Bedroom(1, 1, "single");
+        bedroom2 = new Bedroom(2, 1, "single");
+        bedroom3 = new Bedroom(3, 1, "single");
         conferenceRoom1 = new ConferenceRoom(1, 3);
         diningRoom1 = new DiningRoom("McDonalds", 4);
         guest1 = new Guest("Foteini", 1);

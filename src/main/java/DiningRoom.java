@@ -11,4 +11,15 @@ public class DiningRoom {
         this.guests = new ArrayList<>();
     }
 
+
+    public void addGuest(Guest guest) {
+        if (countGuests() < capacity) {
+            guests.add(guest);
+        }
+    }
+
+    public int countGuests() {
+        return guests.size();
+    }
+
 }
