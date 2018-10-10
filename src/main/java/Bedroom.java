@@ -23,4 +23,8 @@ public class Bedroom {
     public int countGuests() {
         return guests.size();
     }
+
+    public void removeGuest(Guest guest) {
+        guests.remove(guest);
+    }
 }

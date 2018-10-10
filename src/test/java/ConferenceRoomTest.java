@@ -28,4 +28,11 @@ public class ConferenceRoomTest {
         room.addGuest(guest2);
         assertEquals(1, room.countGuests());
     }
+
+    @Test
+    public void removeGuest(){
+        room.addGuest(guest1);
+        room.removeGuest(guest1);
+        assertEquals(0, room.countGuests());
+    }
 }

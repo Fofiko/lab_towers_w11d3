@@ -37,4 +37,28 @@ public class Hotel {
     public int countDiningRooms() {
         return diningRooms.size();
     }
+
+    public void checkInGuestBedroom(Guest guest, Bedroom room) {
+        room.addGuest(guest);
+    }
+
+    public void checkInGuestConferenceRoom(Guest guest, ConferenceRoom room) {
+        room.addGuest(guest);
+    }
+
+    public void checkInGuestDiningRoom(Guest guest, DiningRoom room) {
+        room.addGuest(guest);
+    }
+
+    public void checkOutGuestBedroom(Guest guest, Bedroom room) {
+        room.removeGuest(guest);
+    }
+
+    public void checkOutGuestConferenceRoom(Guest guest, ConferenceRoom room) {
+        room.removeGuest(guest);
+    }
+
+    public void checkOutGuestDiningRoom(Guest guest, DiningRoom room) {
+        room.removeGuest(guest);
+    }
 }

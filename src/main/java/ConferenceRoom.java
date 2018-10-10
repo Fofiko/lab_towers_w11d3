@@ -23,5 +23,9 @@ public class ConferenceRoom {
     }
 
 
+    public void removeGuest(Guest guest) {
+        guests.remove(guest);
+    }
+
 
 }

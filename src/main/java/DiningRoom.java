@@ -22,4 +22,8 @@ public class DiningRoom {
         return guests.size();
     }
 
+
+    public void removeGuest(Guest guest) {
+        guests.remove(guest);
+    }
 }
