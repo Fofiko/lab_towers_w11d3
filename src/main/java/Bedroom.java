@@ -16,10 +16,13 @@ public class Bedroom {
     }
 
 
-    public void addGuest(Guest guest) {
+    public boolean addGuest(Guest guest) {
         if (countGuests() < capacity) {
             guests.add(guest);
+            return true;
         }
+
+        return false;
     }
 
     public int countGuests() {

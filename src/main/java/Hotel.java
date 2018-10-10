@@ -39,8 +39,10 @@ public class Hotel {
         return diningRooms.size();
     }
 
-    public void checkInGuestBedroom(Guest guest, Bedroom room) {
+    public boolean checkInGuestBedroom(Guest guest, Bedroom room) {
+        boolean result = room.isEmpty();
         room.addGuest(guest);
+        return result;
     }
 
     public void checkInGuestConferenceRoom(Guest guest, ConferenceRoom room) {
@@ -64,8 +66,11 @@ public class Hotel {
     }
 
     public Booking bookBedroom(int nights, Bedroom bedroom, Guest guest) {
-        checkInGuestBedroom(guest, bedroom);
-        return new Booking(bedroom, nights);
+        if (checkInGuestBedroom(guest, bedroom)) {
+            return new Booking(bedroom, nights);
+        }
+
+        return null;
     }
 
     public ArrayList<Bedroom> vacantBedrooms() {

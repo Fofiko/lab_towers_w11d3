@@ -64,6 +64,12 @@ public class HotelTest {
         hotel.checkInGuestBedroom(guest1, bedroom1);
         assertEquals(1, bedroom1.countGuests());
     }
+
+    @Test
+    public void checkInGuestBedroomTaken() {
+        hotel.checkInGuestBedroom(guest1, bedroom1);
+        assertEquals(false, hotel.checkInGuestBedroom(guest1, bedroom1));
+    }
     @Test
     public void checkInGuestConferenceRoom(){
         hotel.checkInGuestConferenceRoom(guest1, conferenceRoom1);
@@ -103,6 +109,12 @@ public class HotelTest {
     public void bookBedroom(){
         hotel.bookBedroom(3, bedroom1, guest1);
         assertEquals(1, bedroom1.countGuests());
+    }
+
+    @Test
+    public void bookBedroomTaken() {
+        hotel.checkInGuestBedroom(guest2, bedroom1);
+        assertEquals(null, hotel.bookBedroom(3, bedroom1, guest1));
     }
 
     @Test
